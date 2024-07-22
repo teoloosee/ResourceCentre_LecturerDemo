@@ -10,6 +10,16 @@ class Test_US_01:
         assert result == True 
         assert len(test_inventory.cameraList) == 1
 
+    def test_add_camera_to_non_empty_list(self):
+        test_inventory = Inventory()
+        result = test_inventory.addCamera("C001", "Test camera 1", 5)
+        original_len = len(test_inventory.cameraList)
+
+        result = test_inventory.addCamera("C002", "Test camera 2", 10)
+
+        assert result == True
+        assert len(test_inventory.cameraList) == original_len + 1
+    
     def test_add_existing_camera(self): 
         test_inventory = Inventory() 
         result = test_inventory.addCamera("C001", "Test camera 1", 5) 
