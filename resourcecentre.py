@@ -45,7 +45,6 @@ class ResourceCenter:
                 print("2. Laptop")
                 option = int(input("Enter option to select item type >"))
 
-                # TO-DO: Write the code to ADD a camcorder or chrome book.
                 # TO-DO: Write the code to ADD a digital camera or laptop. 
                 if option == 1: 
                     assetTag = input("Enter asset tag >") 
